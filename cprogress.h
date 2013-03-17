@@ -3,34 +3,57 @@
 using namespace std;
 
 class CProgressBar {   
-      int maxProgressBar, tick;
-
+      int maxTicks, tick;
+      bool started;
+      
       public:
              CProgressBar(int max) {
-                  maxProgressBar = max;
+                  maxTicks = max;
                   tick = 0;
+                  started = false;
              }
       
              bool Start() {
                   PopolaProgressbar ();
+                  started = true;
                   return true;
              }
           
              bool Tick() {
                  tick ++;
-                 if (tick > maxProgressBar) return false;
+                 if (tick > maxTicks) {
+                    cout << endl;
+                    return false;
+                 }
                  
                  PopolaProgressbar ();
                  return true;
              }
              
+             bool SetMaxTicks(int ticks) {
+                 if (tick > ticks) 
+                    return false;
+                    
+                 maxTicks = ticks;
+                 
+                 if (started == true) 
+                    PopolaProgressbar ();
+                    
+                 return true;
+             }
+             
              int GetTicks() { return tick; }
+             
+             void Close ()
+             {
+                  cout << endl;     
+             }
              
       private:
              void PopolaProgressbar() {
                  string p = "[";
                  
-                 for (int x = 0; x < maxProgressBar; x++) {
+                 for (int x = 0; x < maxTicks; x++) {
                      if (x < tick) {
                         p = p + "=";      
                      }    

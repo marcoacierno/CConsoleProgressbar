@@ -26,6 +26,30 @@ int main()
     // ...
     
     c.Tick();
+    
+    c.SetMaxTicks(10);
+    
+    c.Tick();
+    c.Tick();
+    c.Tick();
+    
+    c.Close();
+    
+    CProgressBar d(10);
+    
+    d.SetMaxTicks(20);
+    
+    d.Tick();
+    
+    d.Tick();
+    
+    d.SetMaxTicks(40);
+    
+    d.Tick();
+    
+    d.Tick();
+    
+    d.Tick();
      
     system("PAUSE");
     return EXIT_SUCCESS;
