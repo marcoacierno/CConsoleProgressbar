@@ -5,8 +5,6 @@ Nothing to do &lt;_&lt;
 
 Create a progress bar in a console
 
-main.cpp shows how to use
-
 
     CProgressBar c(5);
     
@@ -33,10 +31,12 @@ main.cpp shows how to use
 
 CProgressBar c(5); init progress bar max ticks will be 5.
 
-C.Start(); create the progress bar in the console (Shows [-----])
+C.Start(); create the progress bar in the console ([-----])
 
-c.Tick(); will do a tick and the input now show [=----]
+c.Tick(); will do a tick and now the output is [=----]
 
-When ticks > max ticks the c.Tick() returns false.
+When ticks > max ticks  c.Tick() returns false.
 
 Use GetTick() to know current tick
+SetMaxTicks(int) change max ticks
+
