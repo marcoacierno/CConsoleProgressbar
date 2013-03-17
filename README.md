@@ -7,7 +7,7 @@ Create a progress bar in a console
 
 main.cpp shows how to use
 
-[CODE]
+
     CProgressBar c(5);
     
     c.Start();
@@ -30,7 +30,6 @@ main.cpp shows how to use
     
     c.Tick();
      
-[/CODE]
 
 CProgressBar c(5); init progress bar max ticks will be 5.
 
