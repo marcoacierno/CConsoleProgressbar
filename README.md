@@ -37,6 +37,6 @@ C.Start(); create the progress bar in the console (Shows [-----])
 
 c.Tick(); will do a tick and the input now show [=----]
 
-When ticks >= max ticks the c.Tick() returns false.
+When ticks > max ticks the c.Tick() returns false.
 
 Use GetTick() to know current tick
