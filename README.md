@@ -33,7 +33,7 @@ CProgressBar c(5); init progress bar max ticks will be 5.
 
 C.Start(); create the progress bar in the console ([-----])
 
-c.Tick(); will do a tick and now the output is [=----]
+c.Tick(); will do a tick and the output will be [=----]
 
 When ticks > max ticks  c.Tick() returns false.
 
