@@ -23,6 +23,7 @@ class CProgressBar {
                  tick ++;
                  if (tick > maxTicks) {
                     cout << endl;
+                    started = false;
                     return false;
                  }
                  
@@ -47,6 +48,7 @@ class CProgressBar {
              void Close ()
              {
                   cout << endl;     
+                  started = false;
              }
              
       private:
